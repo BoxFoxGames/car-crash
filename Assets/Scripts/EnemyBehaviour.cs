@@ -7,7 +7,7 @@ public class EnemyBehaviour : MonoBehaviour
     public int speedMultiplier = 1;
     public int forceMultiplier = 10;
     private bool crashed = false;
-    private Vector3 newPosition;
+    private Vector3 forceVector;
 
     void OnCollisionEnter (Collision col) {
         if(col.gameObject.name == "Despawn")
@@ -17,7 +17,8 @@ public class EnemyBehaviour : MonoBehaviour
         else if (col.gameObject.name == "Player") 
         {
             crashed = true;
-            transform.GetComponent<Rigidbody>().AddForce(Vector3.left * forceMultiplier, ForceMode.Impulse);
+            forceVector = this.transform.position - col.gameObject.transform.position;
+            transform.GetComponent<Rigidbody>().AddForce(forceVector * forceMultiplier, ForceMode.Impulse);
         }
     }
 
