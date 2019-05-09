@@ -6,7 +6,7 @@ public class EnemyBehaviour : MonoBehaviour
 {
     public int speedMultiplier = 1;
     public float forceMultiplier = 5f;
-    private bool crashed = false;
+    public bool crashed = false;
     private Vector3 forceVector;
 
     void OnCollisionEnter (Collision col) {
