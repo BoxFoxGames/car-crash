@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyBehaviour : MonoBehaviour
 {
     public int speedMultiplier = 1;
-    public int forceMultiplier = 10;
+    public float forceMultiplier = 5f;
     private bool crashed = false;
     private Vector3 forceVector;
 
