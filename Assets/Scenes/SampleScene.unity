@@ -316,6 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedMultiplier: 5
+  forceMultiplier: 10
 --- !u!1 &282917092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,5 +1375,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 8499149784435009175, guid: 0e833bd91e9b7177b9c60d2caffea0c4, type: 3}
+  enemies: []
   spawnParent: {fileID: 282917092}
   spawnRate: 0.5

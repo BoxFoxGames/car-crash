@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyBehaviour : MonoBehaviour
 {
     public int speedMultiplier = 1;
-    public float forceMultiplier = 5f;
     public bool crashed = false;
+    private float forceMultiplier = 5f;
     private Vector3 forceVector;
 
     void OnCollisionEnter (Collision col) {
@@ -17,6 +17,7 @@ public class EnemyBehaviour : MonoBehaviour
         else if (col.gameObject.name == "Player") 
         {
             crashed = true;
+            forceMultiplier = col.gameObject.GetComponent<PlayerController>().forceMultiplier;
             forceVector = this.transform.position - col.gameObject.transform.position;
             transform.GetComponent<Rigidbody>().AddForce(forceVector * forceMultiplier, ForceMode.Impulse);
         }

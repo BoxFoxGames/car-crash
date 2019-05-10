@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public int speedMultiplier = 1;
+    public float forceMultiplier = 5f;
+
 
     // Start is called before the first frame update
     void Start()
