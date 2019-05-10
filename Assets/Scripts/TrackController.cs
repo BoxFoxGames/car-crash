@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class TrackController : MonoBehaviour
 {
-    public int speedMultiplier = 1;
+    private int speedMultiplier = 1;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        speedMultiplier = GameObject.Find("Player").GetComponent<PlayerController>().speedMultiplier;
     }
 
     // Update is called once per frame

@@ -315,6 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 786673c6b83b1aeeeaf831898785ff8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  straveMultiplier: 5
   speedMultiplier: 5
   forceMultiplier: 10
 --- !u!1 &282917092
@@ -1051,7 +1052,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0c77d0bb3a6c7855a9800e17b3f49c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 5
 --- !u!1 &1513818495
 GameObject:
   m_ObjectHideFlags: 0

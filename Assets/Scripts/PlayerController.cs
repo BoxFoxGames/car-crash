@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public int straveMultiplier = 1;
     public int speedMultiplier = 1;
     public float forceMultiplier = 5f;
 
@@ -19,9 +20,9 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey("left"))
         {
-            transform.Translate((Vector3.left * Time.deltaTime) * speedMultiplier);
+            transform.Translate((Vector3.left * Time.deltaTime) * straveMultiplier);
         } else if (Input.GetKey("right")) {
-            transform.Translate((Vector3.right * Time.deltaTime) * speedMultiplier);
+            transform.Translate((Vector3.right * Time.deltaTime) * straveMultiplier);
         }
     }
 }
