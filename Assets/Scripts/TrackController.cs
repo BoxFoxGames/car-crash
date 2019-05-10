@@ -15,6 +15,11 @@ public class TrackController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate((Vector3.back * Time.deltaTime) * speedMultiplier);
+
     }
+
+	void FixedUpdate()
+	{
+		transform.Translate((Vector3.back * Time.deltaTime) * speedMultiplier);
+	}
 }

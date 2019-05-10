@@ -18,11 +18,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("left"))
-        {
-            transform.Translate((Vector3.left * Time.deltaTime) * straveMultiplier);
-        } else if (Input.GetKey("right")) {
-            transform.Translate((Vector3.right * Time.deltaTime) * straveMultiplier);
-        }
+		
     }
+
+	void FixedUpdate()
+	{
+		if (Input.GetKey("left"))
+		{
+			transform.Translate((Vector3.left * Time.deltaTime) * straveMultiplier);
+		} else if (Input.GetKey("right")) {
+			transform.Translate((Vector3.right * Time.deltaTime) * straveMultiplier);
+		}
+	}
 }
