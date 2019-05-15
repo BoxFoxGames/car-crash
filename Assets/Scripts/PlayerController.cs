@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlayerController : MonoBehaviour
 {
     public int straveMultiplier = 1;
     public int speedMultiplier = 1;
     public float forceMultiplier = 5f;
+    public int score = 0;
+    public Text scoreText;
 
 
     // Start is called before the first frame update
@@ -29,5 +33,11 @@ public class PlayerController : MonoBehaviour
 		} else if (Input.GetKey("right")) {
 			transform.Translate((Vector3.right * Time.deltaTime) * straveMultiplier);
 		}
+        SetScoreText();
 	}
+
+    void SetScoreText()
+    {
+        scoreText.text = "Score: " + score.ToString() + "$";
+    }
 }
