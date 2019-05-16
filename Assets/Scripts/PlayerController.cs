@@ -10,7 +10,9 @@ public class PlayerController : MonoBehaviour
     public int speedMultiplier = 1;
     public float forceMultiplier = 5f;
     public int score = 0;
+    public int coins = 0;
     public Text scoreText;
+    public Text coinText;
 
 
     // Start is called before the first frame update
@@ -39,5 +41,7 @@ public class PlayerController : MonoBehaviour
     void SetScoreText()
     {
         scoreText.text = "Score: " + score.ToString() + "$";
+        coinText.text = "Coins: " + coins.ToString();
+
     }
 }
